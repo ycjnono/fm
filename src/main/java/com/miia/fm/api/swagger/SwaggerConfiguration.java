@@ -7,7 +7,7 @@
  * @Copyright: 2018 MIIA All rights reserved. 
  * @License Apache License 2.0
  */
-package com.miia.fm.global.api.swagger;
+package com.miia.fm.api.swagger;
 
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
