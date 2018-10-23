@@ -7,7 +7,7 @@
  * @Copyright: 2018 MIIA All rights reserved. 
  * @License Apache License 2.0
  */
-package com.miia.fm.paltform.oauth.entity;
+package com.miia.fm.platform.oauth.entity;
 
 import javax.persistence.Column;
 import javax.persistence.Entity;

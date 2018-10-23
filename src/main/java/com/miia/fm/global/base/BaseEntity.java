@@ -65,6 +65,12 @@ public abstract class BaseEntity implements Serializable {
 	@Column(name = "`last_modifieduser_id`")
 	private String lastModifiedUserId;
 
+	/**
+	 * 数据拥有者
+	 */
+	@Column(name = "`user_id`")
+	private String userId;
+
 	@PrePersist
 	protected void onCreate() {
 		createdTime = new Date();
@@ -143,6 +149,20 @@ public abstract class BaseEntity implements Serializable {
 	 */
 	public void setLastModifiedUserId(String lastModifiedUserId) {
 		this.lastModifiedUserId = lastModifiedUserId;
+	}
+
+	/**
+	 * @return the userId
+	 */
+	public String getUserId() {
+		return userId;
+	}
+
+	/**
+	 * @param userId the userId to set
+	 */
+	public void setUserId(String userId) {
+		this.userId = userId;
 	}
 
 }

@@ -7,7 +7,7 @@
  * @Copyright: 2018 MIIA All rights reserved. 
  * @License Apache License 2.0
  */
-package com.miia.fm.paltform.oauth.entity;
+package com.miia.fm.platform.oauth.entity;
 
 import javax.persistence.Column;
 import javax.persistence.Entity;
@@ -51,6 +51,12 @@ public class User extends BaseEntity {
 	private String salt;
 
 	/**
+	 * 头像
+	 */
+	@Column(name = "head_file_path")
+	private String headFilePath;
+
+	/**
 	 * 关联手机号
 	 */
 	@Column(name = "tel_number")
@@ -78,7 +84,7 @@ public class User extends BaseEntity {
 	 * 用户状态
 	 */
 	@Column(name = "status")
-	private boolean status;
+	private boolean status = true;
 
 	/**
 	 * 角色-多对一关联关系，懒加载
@@ -211,6 +217,20 @@ public class User extends BaseEntity {
 	 */
 	public void setStatus(boolean status) {
 		this.status = status;
+	}
+
+	/**
+	 * @return the headFilePath
+	 */
+	public String getHeadFilePath() {
+		return headFilePath;
+	}
+
+	/**
+	 * @param headFilePath the headFilePath to set
+	 */
+	public void setHeadFilePath(String headFilePath) {
+		this.headFilePath = headFilePath;
 	}
 
 }
